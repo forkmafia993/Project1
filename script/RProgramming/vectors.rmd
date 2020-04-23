@@ -1,0 +1,38 @@
+```{r}
+x<-c(0.5,0.6)      ##numeric
+y<-c(TRUE,FALSE)   ##logical
+z<-c(T,F)          ##logical
+a<-c("a","b","c")  ##character
+b<-c(9:29)         ##integer
+c<-c(1+0i,2+4i)    ##complex
+x;y;z;a;b;c;
+```
+
+#vector using vector function
+```{r}
+x<-vector("numeric", length=10)
+x
+```
+
+# convert data types 
+```{r}
+x<-0:6
+class(x)
+as.numeric(x)
+as.logical(x)
+as.character(x)
+```
+
+#non-sensical coersion
+```{r}
+x<-c("a","b","c")
+as.numeric(x)
+as.logical(x)
+as.complex(x)
+```
+#lists
+```{r}
+x<-list(1,"a",TRUE,1+4i)
+x
+```
+
