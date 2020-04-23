@@ -1,0 +1,28 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Names of R objects
+
+## Names of Tables
+```{r}
+x<-1:3
+x
+names(x)
+
+names(x)<-c("foo","bar","norf")
+x
+names(x)
+```
+## Names of Lists
+```{r}
+x<-list(a=1,b=2,c=3)
+x
+```
+## Names of Matrices
+```{r}
+m<-matrix(1:4,nrow=2, ncol=2)
+dimnames(m)<-list(c("a","b"),c("c","d"))
+m
+```

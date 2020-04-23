@@ -1,0 +1,20 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Factors
+
+```{r}
+x<-factor(c("yes","yes","yes","no","yes"))
+x
+table(x)
+unclass(x)
+```
+## change base line
+
+```{r}
+x<-factor(c("yes","yes","yes","no","yes"),
+          level=c("yes","no"))
+x
+```

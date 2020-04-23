@@ -1,0 +1,65 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Reading Data
+
+* `read.table`, `read.csv`, for reading tabular data
+  + `file`, the name of the file, or a connection
+  + `header`, logical indicating if the file ha a header
+  + `sep`, a string indicating how the columns are separated.
+  + `colClasses`, a character vector indicating the class of each column in the dataset
+  + `nrows`, the number of rows in the dataset
+  + `comment.char`, a character string indicating the comment character
+  + `skip`, the number of lines to skip from the beginning
+  + `stringsAsFactors`, should character variables be coded as factors?
+  
+* `readLines`, for reading lines of a text file
+* `source`, for reading in R code files
+* `dget`, for reading in R code files
+* `load`, for reading in saved workspaces
+* `unserialize`, for reading binary objects in R.
+
+# Writing Data
+
+* `write.table`
+* `writeLines`
+* `dump`
+* `dput`
+* `save`
+* `serialize`
+
+# Handling large datasets
+
+Taking first 100 rows for better memory usage
+```{r eval=FALSE}
+initial<-read.table("datatable.txt", nrows=100)
+classes<-sapply(initial,class)
+tabAll<-read.table("datatable.txt",
+                   `colClasses=classes)
+```
+# dput-ing R Objects
+```{r}
+y<- data.frame(a=1,b="a")
+dput(y)
+dput(y, file="y.R")
+new.y<-dget("y.R")
+new.y
+```
+# Dumping R Objects
+
+```{r}
+x<-"foo"
+y<-data.frame(a=1,b="a")
+dump(c("x","y"), file="data.R")
+rm(x,y)     #this will remove x
+source("data.R")  #this will again load x from source
+x
+```
+
+
+
+
+
+

@@ -1,3 +1,10 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Vectors
+
 ```{r}
 x<-c(0.5,0.6)      ##numeric
 y<-c(TRUE,FALSE)   ##logical
@@ -8,7 +15,7 @@ c<-c(1+0i,2+4i)    ##complex
 x;y;z;a;b;c;
 ```
 
-#vector using vector function
+# Vector using vector function
 ```{r}
 x<-vector("numeric", length=10)
 x
@@ -23,14 +30,14 @@ as.logical(x)
 as.character(x)
 ```
 
-#non-sensical coersion
+# Non-sensical coersion
 ```{r}
 x<-c("a","b","c")
 as.numeric(x)
 as.logical(x)
 as.complex(x)
 ```
-#lists
+# Lists
 ```{r}
 x<-list(1,"a",TRUE,1+4i)
 x

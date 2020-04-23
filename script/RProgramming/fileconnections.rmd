@@ -1,0 +1,48 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# File Connections
+
+## Interface to outside world
+
+```{r}
+str(file)
+```
+* `description` is the name of teh file
+* `open` is a coed indicating:
+ + "r" read only
+ + "w" writing (and initializing a new file)
+ + "a" appending
+ + "rb","wb","ab" reading, writing, or appending in binary mode(Windows)
+ 
+## Connections
+
+```{r eval=FALSE}
+con<-file("foo.txt","r")
+data<-read.csv(con)
+close(con)
+```
+is the same as
+
+```{r eval=FALSE}
+data<-read.csv("foo.txt")
+```
+
+## Reading Lines of a Text File
+
+```{r eval=FALSE}
+con<-gzfile("words.gz")
+x<-readLines(con,10)
+x
+```
+
+## Reading Lines from webpages
+
+```{r}
+con<-url("http://www.jhsph.edu","r")
+x<-readLines(con)
+head(x)
+```
+

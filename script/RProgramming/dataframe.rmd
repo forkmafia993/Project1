@@ -1,0 +1,17 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Data Frames
+
++row.names
++read.table() or read.csv()
++data.matrix()
+
+```{r}
+x<-data.frame(foo=1:4, bar=c(T,F,T,F))
+x
+nrow(x)
+ncol(x)
+```
