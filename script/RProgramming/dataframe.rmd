@@ -5,9 +5,9 @@ output:
 ---
 # Data Frames
 
-+row.names
-+read.table() or read.csv()
-+data.matrix()
+* `row.names`
+* `read.table()` or `read.csv()`
+* `data.matrix()`
 
 ```{r}
 x<-data.frame(foo=1:4, bar=c(T,F,T,F))
