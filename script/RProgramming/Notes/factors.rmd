@@ -15,6 +15,6 @@ unclass(x)
 
 ```{r}
 x<-factor(c("yes","yes","yes","no","yes"),
-          level=c("yes","no"))
+          level=c'("yes","no"))
 x
 ```

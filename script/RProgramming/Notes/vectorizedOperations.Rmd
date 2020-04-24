@@ -1,0 +1,30 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Vectorized Operations
+
+## Vectorixed operation on vectors
+
+```{r}
+x<-1:4;y<-6:9
+x+y
+x>2
+x>=2
+x*y
+x/y
+```
+##  Vectorized operation on matrices (elementwise)
+```{r}
+x<-matrix(1:4,2,2);y<-matrix(rep(10,4),2,2)
+x*y
+x/y
+
+```
+## Vectorized operation on matrices (true Operations)
+```{r}
+x<-matrix(1:4,2,2);y<-matrix(rep(10,4),2,2)
+x %*% y
+```
+
